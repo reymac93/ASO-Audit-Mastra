@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.192",
+    "@mastra/ai-sdk": "^1.4.3",
     "@mastra/core": "^1.36.0",
     "@mastra/duckdb": "^1.4.0",
     "@mastra/libsql": "^1.11.1",
@@ -17,6 +19,7 @@
     "@mastra/memory": "^1.19.0",
     "@mastra/observability": "^1.13.0",
     "@tailwindcss/vite": "^4.3.0",
+    "ai": "^6.0.190",
     "mastra": "^1.10.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
