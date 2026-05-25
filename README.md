@@ -1,73 +1,187 @@
-# React + TypeScript + Vite
+# 🚀 ASO Skills Agent (Mastra + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Node](https://img.shields.io/badge/Node.js-18%2B-green)
+![Mastra](https://img.shields.io/badge/Powered%20by-Mastra-blue)
+![React](https://img.shields.io/badge/Frontend-React-61DAFB)
 
-Currently, two official plugins are available:
+A production-ready App Store Optimization (ASO) audit engine that analyzes mobile apps and generates structured, data-driven optimization reports.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# 📦 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project includes:
 
-## Expanding the ESLint configuration
+- Mastra backend (AI agent system)
+- React frontend (chat UI)
+- ASO scoring engine (0–100)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+It produces SensorTower-style ASO audit reports.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🏗️ Architecture
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+User (React UI)
+        ↓
+Chat API (/chat/:agentId)
+        ↓
+Mastra Agent (ASO Skills Agent)
+        ↓
+ASO Audit Engine (Scoring + Logic)
+        ↓
+Structured Output (Score + Recommendations)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 📁 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+.
+├── src/
+│   ├── mastra/
+│   │   ├── agents/
+│   │   │   └── aso-skills-agent.ts
+│   │   ├── tools/
+│   │   │   └── aso-tools.ts
+│   │   └── index.ts
+│   │
+│   ├── frontend/
+│   │   ├── components/
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│
+└── README.md
+
+---
+
+# ⚙️ Installation
+
+## Clone the repository
+
+git clone <your-repo-url>
+cd <your-project>
+
+## Install dependencies
+
+### Backend (Mastra)
+npm install
+
+### Frontend (React)
+cd frontend
+npm install
+
+---
+
+# ▶️ Running the Project
+
+## Start Mastra Server
+
+npx mastra dev
+
+- Runs on: http://localhost:4111
+
+---
+
+## Start React Frontend
+
+npm run dev
+
+- Runs on: http://localhost:5173
+
+---
+
+# 📡 API
+
+### Endpoint
+
+POST /chat/:agentId
+
+### Example
+
+http://localhost:4111/chat/aso-skills-agent
+
+---
+
+# 🤖 ASO Skills Agent
+
+The agent performs:
+
+- ASO Score calculation (0–100)
+- App listing analysis
+- Ranking optimization insights
+- Conversion improvements
+
+---
+
+# 📊 ASO Audit Framework
+
+| Dimension | Weight |
+|----------|--------|
+| Title | 20% |
+| Subtitle | 15% |
+| Keyword Field | 15% |
+| Description | 10% |
+| Screenshots | 15% |
+| App Preview Video | 5% |
+| Ratings & Reviews | 15% |
+| Icon | 5% |
+| Conversion Signals | 5% |
+| Competitive Position | 5% |
+
+Total = 100%  
+Deterministic scoring  
+No incorrect totals  
+
+---
+
+# 📱 Example Input
+
+https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580
+
+---
+
+# 📈 Output Includes
+
+- ASO Score (0–100)
+- Dimension breakdown
+- Key issues
+- Quick wins
+- Strategic improvements
+- Competitor comparison
+
+---
+
+# 🧠 Key Features
+
+- Always returns full audit (no blocking)
+- Mobile-friendly output
+- Strict scoring logic
+- Production-grade reports
+- Works with minimal input
+
+---
+
+# 🛠️ Tech Stack
+
+- Mastra AI SDK
+- React
+- TypeScript
+- Zod
+- Tailwind CSS
+
+---
+
+# 🚀 Roadmap
+
+- [ ] ASO dashboard (charts)
+- [ ] Keyword gap analysis
+- [ ] Competitor intelligence
+- [ ] Historical tracking
+- [ ] JSON API output
+
+---
+
+# 📄 License
+
+MIT
