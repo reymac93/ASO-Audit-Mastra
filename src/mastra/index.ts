@@ -5,14 +5,15 @@ import { LibSQLStore } from '@mastra/libsql';
 import { DuckDBStore } from "@mastra/duckdb";
 import { MastraCompositeStore } from '@mastra/core/storage';
 import { Observability, MastraStorageExporter, MastraPlatformExporter, SensitiveDataFilter } from '@mastra/observability';
-import { weatherWorkflow } from './workflows/weather-workflow';
-import { weatherAgent } from './agents/weather-agent';
+// import { weatherWorkflow } from './workflows/weather-workflow';
+// import { weatherAgent } from './agents/weather-agent';
+import { asoSkillsAgent } from './agents/aso-skills-agent';
 import { chatRoute } from '@mastra/ai-sdk'
 
 
 export const mastra = new Mastra({
-  workflows: { weatherWorkflow },
-  agents: { weatherAgent },
+  // workflows: { weatherWorkflow },
+  agents: { asoSkillsAgent },
   storage: new MastraCompositeStore({
     id: 'composite-storage',
     default: new LibSQLStore({

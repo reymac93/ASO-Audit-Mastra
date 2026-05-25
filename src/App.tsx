@@ -23,7 +23,7 @@ export default function App() {
 
   const { messages, sendMessage, status } = useChat({
     transport: new DefaultChatTransport({
-      api: 'http://localhost:4111/chat/weather-agent',
+      api: 'http://localhost:4111/chat/aso-skills',
     }),
   })
 
@@ -36,6 +36,7 @@ export default function App() {
 
   return (
     <div className="relative mx-auto size-full h-screen max-w-4xl p-6">
+      <p>https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580</p>
       <div className="flex h-full flex-col">
         <Conversation className="h-full">
           <ConversationContent>
