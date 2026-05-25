@@ -11,7 +11,7 @@ import { createWorkflow, createStep } from '@mastra/core/workflows';
 import z$2, { z } from 'zod';
 import { Agent, MessageList, isDurableAgentLike } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
-import { weatherTool } from './tools/d1cf4b0e-0784-42e8-9b37-50a2fb5f37f4.mjs';
+import { weatherTool } from './tools/22ba1127-81cb-477a-9962-352e27ed7f6a.mjs';
 import { chatRoute } from '@mastra/ai-sdk';
 import { readFile } from 'fs/promises';
 import * as https from 'https';
@@ -217,7 +217,7 @@ Your primary function is to help users get weather details for specific location
 - If the user asks for activities, respond in the format they request.
 
 Use the weatherTool to fetch current weather data.`,
-  model: "openai/gpt-5-mini",
+  model: "groq/llama-3.1-8b-instant",
   tools: { weatherTool },
   memory: new Memory()
 });

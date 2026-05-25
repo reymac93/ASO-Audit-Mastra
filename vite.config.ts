@@ -10,4 +10,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    watch: {
+      // Ignore database and temporary files written by the Mastra backend
+      ignored: ['**/mastra.db', '**/src/mastra/public/**', '**/*.duckdb*', '**/*.wal'],
+    },
+  },
 })
