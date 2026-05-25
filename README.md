@@ -35,25 +35,6 @@ Structured Output (Score + Recommendations)
 
 ---
 
-# 📁 Project Structure
-
-.
-├── src/
-│   ├── mastra/
-│   │   ├── agents/
-│   │   │   └── aso-skills-agent.ts
-│   │   ├── tools/
-│   │   │   └── aso-tools.ts
-│   │   └── index.ts
-│   │
-│   ├── frontend/
-│   │   ├── components/
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│
-└── README.md
-
----
 
 # ⚙️ Installation
 
@@ -64,12 +45,6 @@ cd <your-project>
 
 ## Install dependencies
 
-### Backend (Mastra)
-npm install
-
-### Frontend (React)
-cd frontend
-npm install
 
 ---
 

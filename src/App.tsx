@@ -36,7 +36,6 @@ export default function App() {
 
   return (
     <div className="relative mx-auto size-full h-screen max-w-4xl p-6">
-      <p>https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580</p>
       <div className="flex h-full flex-col">
         <Conversation className="h-full">
           <ConversationContent>
